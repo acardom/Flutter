@@ -1,0 +1,69 @@
+version: "3.1"
+nlu:
+
+- intent: greet
+  examples: |
+    - Hola
+    - Buenos días
+    - Buenas tardes
+    - Buenas noches
+    - ¿Qué tal?
+    - ¿Cómo estás?
+    - Hola, ¿qué tal?
+    - Hola, ¿cómo estás?
+- intent: preguntar_talla
+
+  examples: |
+    - ¿Cuál es mi talla si mido [1.75](altura) y peso [70](peso) kg?
+    - ¿Qué talla debo comprar si peso [80](peso) kg y mido [1.65](altura)?
+    - Mido [1.80](altura) y peso [85](peso), ¿qué talla me recomiendas?
+    - ¿Cuál sería mi talla ideal para un pantalón si peso [90](peso) kg y mido [1.70](altura)?
+    - ¿Me puedes decir mi talla de camiseta con mi peso de [95](peso) kg y altura de [1.75](altura)?
+    - ¿Qué talla debería elegir para un vestido si mido [1.60](altura) y peso [60](peso)?
+    - ¿Cuál es la talla correcta para un niño de 10 años que mide [1.40](altura) y pesa [40](peso) kg?
+    - Quiero saber qué talla de chaqueta comprar si uso una [M](talla) en camisas.
+    - ¿Cómo puedo calcular mi talla basándome en mis medidas?
+
+- intent: pedir_equivalencias
+  examples: |
+    - ¿Cuál es la talla equivalente de [M](talla) en EE.UU?
+    - ¿Qué talla en México corresponde a una [L](talla) en España?
+    - Si tengo una talla [S](talla) en Europa, ¿qué debería pedir en EE.UU?
+    - ¿Cómo convierto mi talla de zapatos a talla americana?
+    - ¿Me puedes dar una tabla de conversión de tallas?
+    - Quiero saber la equivalencia de tallas entre países.
+    - ¿Cómo convierto una talla de jeans de EE.UU a Europa?
+    - ¿Cuál es la talla XS en Francia?
+    - Si en Asia uso una talla [XL](talla), ¿cuál sería en España?
+
+- intent: preferencias_ajuste
+  examples: |
+    - Quiero una camiseta ajustada, ¿qué talla debería elegir?
+    - Prefiero ropa holgada, ¿qué talla me recomiendas?
+    - Me gusta la ropa ajustada, pero no muy apretada, ¿qué talla sería mejor?
+    - ¿Las tallas de esta marca son grandes o pequeñas?
+    - ¿Cómo elijo una talla si quiero un fit más relajado?
+    - Me gusta que la ropa quede ajustada al cuerpo, ¿qué me sugieres?
+    - No me gustan las camisetas muy largas, ¿qué talla debería pedir?
+    - Quiero que mi ropa tenga un ajuste normal, ¿qué debo buscar?
+
+- intent: goodbye
+  examples: |
+    - Adiós
+    - Hasta luego
+    - Nos vemos
+    - Gracias, adiós
+    - Chau, nos vemos luego
+    - Muchas gracias, ya tengo la información
+    - Fue de gran ayuda, hasta la próxima
+
+- intent: bot_challenge
+  examples: |
+    - ¿Eres un bot?
+    - ¿Eres humano?
+    - ¿Quién eres?
+    - ¿Qué puedes hacer?
+    - ¿Fuiste programado para responder sobre tallas de ropa?
+    - ¿Cómo sabes sobre tallas de ropa?
+    - ¿Eres una inteligencia artificial?
+

@@ -1,0 +1,67 @@
+# filepath: /c:/Users/carde/Desktop/local/rasa_bot_prueba/domain.yml
+version: "3.1"
+intents:
+  - greet
+  - preguntar_talla
+  - pedir_equivalencias
+  - preferencias_ajuste
+  - goodbye
+  - bot_challenge
+
+entities:
+  - altura
+  - peso
+  - talla
+
+slots:
+  altura:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: altura
+  peso:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: peso
+  talla:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: talla
+
+responses:
+  utter_greet:
+    - text: "¡Hola! ¿En qué puedo ayudarte hoy?"
+    - text: "¡Buenos días! ¿Cómo puedo asistirte?"
+    - text: "¡Buenas tardes! ¿Qué necesitas saber?"
+    - text: "¡Buenas noches! ¿En qué puedo ayudarte?"
+
+  utter_talla:
+    - text: "Para una altura de {altura} m y un peso de {peso} kg, la talla recomendada es M."
+    - text: "Según tus medidas ({altura} m, {peso} kg), deberías usar una talla L."
+    - text: "Si mides {altura} m y pesas {peso} kg, una talla M podría quedarte bien."
+
+  utter_pedir_equivalencias:
+    - text: "La talla {talla} en España es equivalente a una talla M en EE.UU."
+    - text: "En México, una talla {talla} en Europa suele ser una L."
+    - text: "Déjame consultar la tabla de equivalencias para la talla {talla}."
+    - text: "La talla {talla} en EE.UU es equivalente a una talla M en España."
+
+  utter_preferencias_ajuste:
+    - text: "Si te gusta la ropa ajustada, podrías elegir una talla menor a la habitual."
+    - text: "Para un ajuste más holgado, elige una talla más grande."
+
+  utter_goodbye:
+    - text: "¡Hasta luego! Si necesitas más ayuda, aquí estaré."
+    - text: "Gracias por usar el asistente. ¡Nos vemos pronto!"
+
+  utter_bot_challenge:
+    - text: "Soy un asistente virtual de tallas de ropa, aquí para ayudarte."
+    - text: "Soy una inteligencia artificial especializada en tallas y ajustes de ropa."
+
+  utter_iamabot:
+    - text: "Soy un asistente virtual especializado en tallas de ropa. Pregunta lo que necesites."
+
+actions:
+  - action_calcular_talla

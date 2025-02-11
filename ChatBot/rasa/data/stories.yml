@@ -1,0 +1,33 @@
+# filepath: /c:/Users/carde/Desktop/local/rasa_bot_prueba/data/stories.yml
+version: "3.1"
+
+stories:
+- story: saludar
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: preguntar talla
+  steps:
+  - intent: preguntar_talla
+  - action: utter_talla
+
+- story: pedir equivalencias
+  steps:
+  - intent: pedir_equivalencias
+  - action: utter_pedir_equivalencias
+
+- story: preferencias ajuste
+  steps:
+  - intent: preferencias_ajuste
+  - action: utter_preferencias_ajuste
+
+- story: despedida
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: desafío bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
